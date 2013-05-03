@@ -87,7 +87,7 @@
 	//
 	function capturePhoto() {
 	  	// Take picture using device camera and retrieve image as base64-encoded string
-	  	navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50,
+	  	navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 80,
 			destinationType: destinationType.DATA_URL });
 	}
 
@@ -95,7 +95,7 @@
 	//
 	function capturePhotoEdit() {
 	  // Take picture using device camera, allow edit, and retrieve image as base64-encoded string
-	 	navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 20, allowEdit: true,
+	 	navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 80, allowEdit: true,
 			destinationType: destinationType.DATA_URL });
 	}
 
@@ -103,7 +103,7 @@
 	//
 	function getPhoto(source) {
 	  	// Retrieve image file location from specified source
-	  	navigator.camera.getPicture(onPhotoURISuccess, onFail, { quality: 50,
+	  	navigator.camera.getPicture(onPhotoURISuccess, onFail, { quality: 80,
 			destinationType: destinationType.FILE_URI,
 			sourceType: source });
 	}
