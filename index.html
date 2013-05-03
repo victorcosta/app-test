@@ -59,7 +59,16 @@
 
 				<h2>Posicionamento fixo</h2>
 
-				<p><a href="#" onclick="showAlert(); return false;">Alert</a></p>
+				<p><a href="#" onclick="showAlert(); return false;">Alerta</a></p>
+
+				<div>
+					<button onclick="capturePhoto();">Capturar Photo</button> <br>
+				    <button onclick="capturePhotoEdit();">Capturar Photo Editavel</button> <br>
+				    <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</button><br>
+				    <button onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">From Photo Album</button><br>
+				    <img style="display:none;width:60px;height:60px;" id="smallImage" src="" />
+				    <img style="display:none;" id="largeImage" src="" />
+				</div>
 
 			</div><!-- /content -->
 
