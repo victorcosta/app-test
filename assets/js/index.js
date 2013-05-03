@@ -63,6 +63,16 @@
 	  	smallImage.src = "data:image/jpeg;base64," + imageData;
 	}
 
+	function showpic(){
+		var smallImage = document.getElementById('smallImage');
+		var largeImage = document.getElementById('largeImage');
+
+		largeImage.style.display = 'block';
+
+		largeImage.src = smallImage.src;
+
+	}
+
 	// Called when a photo is successfully retrieved
 	//
 	function onPhotoURISuccess(imageURI) {
