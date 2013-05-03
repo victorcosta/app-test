@@ -22,10 +22,10 @@
 	//
 	function showAlert() {
 		navigator.notification.alert(
-			'You are the winner!',  // message
+			'Oppa Gangnan style!',  // message
 			alertDismissed,         // callback
-			'Game Over',            // title
-			'Done'                  // buttonName
+			'huahuahauh',            // title
+			'OK'                  // buttonName
 		);
 	}
 
