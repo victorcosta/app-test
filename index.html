@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]>    <html class="no-js iem7"> <![endif]-->
+<!--[if (gt IEMobile 7)|!(IEMobile)]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="description" content="">
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="cleartype" content="on">
+
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/img/touch/apple-touch-icon-144x144-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/img/touch/apple-touch-icon-114x114-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/img/touch/apple-touch-icon-72x72-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" href="assets/img/touch/apple-touch-icon-57x57-precomposed.png">
+		<link rel="shortcut icon" href="assets/img/touch/apple-touch-icon.png">
+
+		<!-- Tile icon for Win8 (144x144 + tile color) -->
+		<meta name="msapplication-TileImage" content="assets/img/touch/apple-touch-icon-144x144-precomposed.png">
+		<meta name="msapplication-TileColor" content="#222222">
+
+
+		<!-- For iOS web apps. Delete if not needed. https://github.com/h5bp/mobile-boilerplate/issues/94 -->
+		<!--
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-mobile-web-app-title" content="">
+		-->
+
+		<!-- This script prevents links from opening in Mobile Safari. https://gist.github.com/1042026 -->
+		<!--
+		<script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
+		-->
+		<script src="assets/js/cordova-2.7.0.js"></script>
+		<script src="assets/js/jquery.js"></script>
+		<script src="assets/js/jquery.mobile-1.3.1.min.js"></script>
+
+		<link rel="stylesheet" href="assets/css/style.css">
+		<link rel="stylesheet" href="assets/css/themes/default/jquery.mobile-1.3.1.css">
+		<link rel="stylesheet" href="assets/css/themes/default/jquery.mobile-1.3.1.min.css">
+		<link rel="stylesheet" href="assets/css/themes/default/jquery.mobile.structure-1.3.1.css">
+		<link rel="stylesheet" href="assets/css/themes/default/jquery.mobile.structure-1.3.1.min.css">
+		<link rel="stylesheet" href="assets/css/themes/default/jquery.mobile.theme-1.3.1.css">
+		<link rel="stylesheet" href="assets/css/themes/default/jquery.mobile.theme-1.3.1.min.css">
+	</head>
+	<body>
+
+		<div data-role="page" class="jqm-demos ui-responsive-panel" id="panel-fixed-page1">
+			<div data-role="header" data-theme="f" data-position="fixed">
+				<h1>Cabeçalho</h1>
+				<a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+				<a href="#add-form" data-icon="gear" data-iconpos="notext">Add</a>
+			</div><!-- /header -->
+
+			<div data-role="content" class="jqm-content">
+
+				<h1>Localização</h1>
+
+				<h2>Fixed positioning</h2>
+				<div id="maps">
+					<iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com.br/maps?f=q&amp;source=s_q&amp;hl=pt&amp;geocode=&amp;q=Art%26C+Comunica%C3%A7%C3%A3o+-+Avenida+Romualdo+Galv%C3%A3o,+Natal+-+Rio+Grande+do+Norte&amp;aq=0&amp;oq=art%26&amp;sll=-5.799318,-35.221265&amp;sspn=0.317997,0.528374&amp;t=h&amp;ie=UTF8&amp;hq=Art%26C+Comunica%C3%A7%C3%A3o+-&amp;hnear=Av.+Romualdo+Galv%C3%A3o+-+Natal+-+Rio+Grande+do+Norte&amp;ll=-5.801818,-35.204618&amp;spn=0.023827,0.008371&amp;output=embed"></iframe>
+				</div>
+				<h3>Testando novamente</h3>
+
+				<p><a href="#" onclick="showAlert(); return false;">Alert</a></p>
+
+			</div><!-- /content -->
+
+			<div data-role="footer" data-position="fixed" data-theme="f">
+				<h4>App demo</h4>
+			</div>
+			<div data-role="panel" data-position-fixed="true" data-theme="a" id="nav-panel">
+
+				<ul data-role="listview" data-theme="a" class="nav-search">
+					<li data-icon="delete">
+						<a href="#" data-rel="close">Close menu</a>
+					</li>
+				</ul>
+
+			</div><!-- /panel -->
+			<div data-role="panel" data-position="right" data-position-fixed="true" data-display="overlay" data-theme="b" id="add-form">
+
+		        <form class="userform">
+
+		        	<h2>Login</h2>
+
+		            <label for="name">Username:</label>
+		            <input type="text" name="name" id="name" value="" data-clear-btn="true" data-mini="true">
+
+		            <label for="password">Password:</label>
+		            <input type="password" name="password" id="password" value="" data-clear-btn="true" autocomplete="off" data-mini="true">
+
+		            <div class="ui-grid-a">
+		                <div class="ui-block-a"><a href="#" data-rel="close" data-role="button" data-theme="c" data-mini="true">Cancel</a></div>
+		                <div class="ui-block-b"><a href="#" data-rel="close" data-role="button" data-theme="b" data-mini="true">Save</a></div>
+					</div>
+		        </form>
+
+			</div><!-- /panel -->
+
+
+		</div> <!-- /page -->
+
+		<!-- Add your site or application content here -->
+		<script src="assets/js/index.js"></script>
+		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+		<script>
+			var _gaq=[["_setAccount","UA-XXXXX-X"],["_trackPageview"]];
+			(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+			g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+			s.parentNode.insertBefore(g,s)}(document,"script"));
+		</script>
+	</body>
+</html>
