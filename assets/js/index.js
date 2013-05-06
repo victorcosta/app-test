@@ -20,7 +20,7 @@
 	function startWatch() {
 
         // Update acceleration every 3 seconds
-        var options = { frequency: 3000 };
+        var options = { frequency: 100 };
 
         watchID = navigator.accelerometer.watchAcceleration(onSuccessAceleration, onErrorAceleration, options);
     }
@@ -34,10 +34,14 @@
 
     function onSuccessAceleration(acceleration) {
         var element = document.getElementById('accelerometer');
-        element.innerHTML = 'Acceleration X: ' + acceleration.x + '<br />' +
+        var block 	= document.getElementById('block');
+        /*element.innerHTML = 'Acceleration X: ' + acceleration.x + '<br />' +
                             'Acceleration Y: ' + acceleration.y + '<br />' +
                             'Acceleration Z: ' + acceleration.z + '<br />' +
-                            'Timestamp: '      + acceleration.timestamp + '<br />';
+                            'Timestamp: '      + acceleration.timestamp + '<br />';*/
+        block.style.rotateX = acceleration.x;
+        block.style.rotateY = acceleration.y;
+        block.style.rotateZ = acceleration.z;
     }
 
     // onError: Failed to get the acceleration
