@@ -63,11 +63,12 @@
 
 				<div>
 					<img style="display:none; width:100%;" id="largeImage" src="" />
-					<button onclick="capturePhoto();">Capturar Photo</button> <br>
-				    <button onclick="capturePhotoEdit();">Capturar Photo Editavel</button> <br>
-				    <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</button><br>
-				    <button onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">From Photo Album</button><br>
+					<button onclick="capturePhoto();">Capturar Photo</button>
+				    <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</button>
 				    <img onclick="showpic()" style="display:none;width:60px;height:60px;" id="smallImage" src="" />
+				    <p id="conection"></p>
+					<div id="accelerometer">Waiting for accelerometer...</div>
+    				<button onclick="stopWatch();">Stop Watching</button>
 				</div>
 
 			</div><!-- /content -->

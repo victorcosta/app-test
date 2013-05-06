@@ -3,6 +3,9 @@
 
 	var pictureSource;   // picture source
 	var destinationType; // sets the format of returned value
+	var watchID = null;
+
+	document.addEventListener("deviceready", onDeviceReady, false);
 
 
 	// Cordova is ready
@@ -11,7 +14,37 @@
 		checkConnection();
 		pictureSource=navigator.camera.PictureSourceType;
 		destinationType=navigator.camera.DestinationType;
+		startWatch();
 	}
+
+	function startWatch() {
+
+        // Update acceleration every 3 seconds
+        var options = { frequency: 3000 };
+
+        watchID = navigator.accelerometer.watchAcceleration(onSuccessAceleration, onErrorAceleration, options);
+    }
+
+    function stopWatch() {
+        if (watchID) {
+            navigator.accelerometer.clearWatch(watchID);
+            watchID = null;
+        }
+    }
+
+    function onSuccessAceleration(acceleration) {
+        var element = document.getElementById('accelerometer');
+        element.innerHTML = 'Acceleration X: ' + acceleration.x + '<br />' +
+                            'Acceleration Y: ' + acceleration.y + '<br />' +
+                            'Acceleration Z: ' + acceleration.z + '<br />' +
+                            'Timestamp: '      + acceleration.timestamp + '<br />';
+    }
+
+    // onError: Failed to get the acceleration
+    //
+    function onErrorAceleration() {
+        alert('onError!');
+    }
 
 	// alert dialog dismissed
 	function alertDismissed() {
