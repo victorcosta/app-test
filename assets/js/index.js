@@ -35,10 +35,10 @@
     function onSuccessAceleration(acceleration) {
         var element = document.getElementById('accelerometer');
         var block 	= document.getElementById('block');
-        /*element.innerHTML = 'Acceleration X: ' + acceleration.x + '<br />' +
+        element.innerHTML = 'Acceleration X: ' + acceleration.x + '<br />' +
                             'Acceleration Y: ' + acceleration.y + '<br />' +
                             'Acceleration Z: ' + acceleration.z + '<br />' +
-                            'Timestamp: '      + acceleration.timestamp + '<br />';*/
+                            'Timestamp: '      + acceleration.timestamp + '<br />';
         /*block.style.rotateX = acceleration.x;
         block.style.rotateY = acceleration.y;
         block.style.rotateZ = acceleration.z;*/
