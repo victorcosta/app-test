@@ -66,16 +66,19 @@
 		var networkState = navigator.connection.type;
 
 		var states = {};
-		states[Connection.UNKNOWN]  = 'Unknown connection';
-		states[Connection.ETHERNET] = 'Ethernet connection';
-		states[Connection.WIFI]     = 'WiFi connection';
-		states[Connection.CELL_2G]  = 'Cell 2G connection';
-		states[Connection.CELL_3G]  = 'Cell 3G connection';
-		states[Connection.CELL_4G]  = 'Cell 4G connection';
-		states[Connection.CELL]     = 'Cell generic connection';
-		states[Connection.NONE]     = 'No network connection';
+		states[Connection.UNKNOWN]  = 'Conexão desconhecida';
+		states[Connection.ETHERNET] = 'Conexão Ethernet';
+		states[Connection.WIFI]     = 'Você está Conectado pelo WiFi';
+		states[Connection.CELL_2G]  = 'Você está Conectado pelo 2G';
+		states[Connection.CELL_3G]  = 'Você está Conectado pelo 3G';
+		states[Connection.CELL_4G]  = 'Você está Conectado pelo 4G';
+		states[Connection.CELL]     = 'Você está Conectado por uma conexão de celular';
+		states[Connection.NONE]     = 'Sem Conexão de rede';
 
-		alert('Connection type: ' + states[networkState]);
+		var conection 			= 	document.getElementById('conection');
+
+		conection.innerHTML 	=  	states[networkState];
+
 	}
 
 	function onPhotoDataSuccess(imageData) {
@@ -98,6 +101,7 @@
 
 	function showpic(){
 		var smallImage = document.getElementById('smallImage');
+
 		var largeImage = document.getElementById('largeImage');
 
 		largeImage.style.display = 'block';
