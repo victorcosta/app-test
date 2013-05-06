@@ -35,14 +35,14 @@
     function onSuccessAceleration(acceleration) {
         var element = document.getElementById('accelerometer');
         var block 	= document.getElementById('block');
-        element.innerHTML = 'Acceleration X: ' + acceleration.x + '<br />' +
-                            'Acceleration Y: ' + acceleration.y + '<br />' +
-                            'Acceleration Z: ' + acceleration.z + '<br />' +
-                            'Timestamp: '      + acceleration.timestamp + '<br />';
+        // element.innerHTML = 'Acceleration X: ' + acceleration.x + '<br />' +
+        //                     'Acceleration Y: ' + acceleration.y + '<br />' +
+        //                     'Acceleration Z: ' + acceleration.z + '<br />' +
+        //                     'Timestamp: '      + acceleration.timestamp + '<br />';
 
-        $('#block').css('transform', 'rotate('+acceleration.x+'deg )');
-        $('#block').css('-webkit-transform', 'rotate('+acceleration.x+'deg )');
-        $('#block').css('-moz-transform', 'rotate('+acceleration.x+'deg )');
+        $('#block').css('transform', 'rotate('+(acceleration.x * 2)+'deg )');
+        $('#block').css('-webkit-transform', 'rotate('+(acceleration.x * 2)+'deg )');
+        $('#block').css('-moz-transform', 'rotate('+(acceleration.x * 2)+'deg )');
 
 
     }
