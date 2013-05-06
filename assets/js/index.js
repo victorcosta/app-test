@@ -39,12 +39,11 @@
                             'Acceleration Y: ' + acceleration.y + '<br />' +
                             'Acceleration Z: ' + acceleration.z + '<br />' +
                             'Timestamp: '      + acceleration.timestamp + '<br />';
-        /*block.style.rotateX = acceleration.x;
-        block.style.rotateY = acceleration.y;
-        block.style.rotateZ = acceleration.z;*/
-        $('#block').css('rotateX', acceleration.x);
-        $('#block').css('rotateY', acceleration.y);
-        $('#block').css('rotateZ', acceleration.z);
+
+        $('#block').css('transform', 'rotate('+acceleration.x+'deg )');
+        $('#block').css('-webkit-transform', 'rotate('+acceleration.x+'deg )');
+        $('#block').css('-moz-transform', 'rotate('+acceleration.x+'deg )');
+
 
     }
 
