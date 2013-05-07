@@ -49,9 +49,9 @@
     }
 
     function onSuccessCompass(heading) {
-        $('#triangle').css('transform', 'rotate('+(heading.magneticHeading)+'deg )');
-        $('#triangle').css('-webkit-transform', 'rotate('+(heading.magneticHeading)+'deg )');
-        $('#triangle').css('-moz-transform', 'rotate('+(heading.magneticHeading)+'deg )');
+        $('#triangle').css('transform', 'rotate('+(heading.magneticHeading*(-1))+'deg )');
+        $('#triangle').css('-webkit-transform', 'rotate('+(heading.magneticHeading*(-1))+'deg )');
+        $('#triangle').css('-moz-transform', 'rotate('+(heading.magneticHeading*(-1))+'deg )');
     }
 
     // onError: Failed to get the acceleration
