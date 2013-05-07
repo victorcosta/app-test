@@ -44,7 +44,7 @@
         $('#block').css('transform', 'rotate('+(acceleration.x * 2)+'deg )');
         $('#block').css('-webkit-transform', 'rotate('+(acceleration.x * 2)+'deg )');
         $('#block').css('-moz-transform', 'rotate('+(acceleration.x * 2)+'deg )');
-        $('#block').html(acceleration.y+'<br/>'+acceleration.z);
+        // $('#block').html(acceleration.y+'<br/>'+acceleration.z);
 
     }
 
