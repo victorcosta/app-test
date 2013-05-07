@@ -3,7 +3,8 @@
 
 	var pictureSource;   // picture source
 	var destinationType; // sets the format of returned value
-	var watchID = null;
+	var watchIDAcelerometer = null;
+	var watchIDCompass = null;
 
 	document.addEventListener("deviceready", onDeviceReady, false);
 
@@ -22,13 +23,18 @@
         // Update acceleration every 3 seconds
         var options = { frequency: 1 };
 
-        watchID = navigator.accelerometer.watchAcceleration(onSuccessAceleration, onErrorAceleration, options);
+        watchIDAcelerometer = navigator.accelerometer.watchAcceleration(onSuccessAceleration, onErrorAceleration, options);
+        watchIDCompass = navigator.compass.watchHeading(onSuccessCompass, onErrorCompass, options);
     }
 
     function stopWatch() {
-        if (watchID) {
-            navigator.accelerometer.clearWatch(watchID);
-            watchID = null;
+        if (watchIDAcelerometer) {
+            navigator.accelerometer.clearWatch(watchIDAcelerometer);
+            watchIDAcelerometer = null;
+        }
+        if (watchIDCompass) {
+            navigator.compass.clearWatch(watchIDCompass);
+            watchIDCompass = null;
         }
     }
 
@@ -47,10 +53,18 @@
 
     }
 
+    function onSuccessCompass(heading) {
+        $('#block').html(heading.magneticHeading);
+    }
+
     // onError: Failed to get the acceleration
     //
     function onErrorAceleration() {
         alert('onError!');
+    }
+
+    function onErrorCompass(compassError) {
+        alert('Compass error: ' + compassError.code);
     }
 
 	// alert dialog dismissed
