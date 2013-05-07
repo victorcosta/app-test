@@ -16,6 +16,7 @@
 		pictureSource=navigator.camera.PictureSourceType;
 		destinationType=navigator.camera.DestinationType;
 		startWatch();
+		navigator.splashscreen.hide();
 	}
 
 	function startWatch() {
