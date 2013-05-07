@@ -1,12 +1,11 @@
 	document.addEventListener("deviceready", onDeviceReady, false);
+	navigator.splashscreen.show();
 
 
 	var pictureSource;   // picture source
 	var destinationType; // sets the format of returned value
 	var watchIDAcelerometer = null;
 	var watchIDCompass = null;
-
-	document.addEventListener("deviceready", onDeviceReady, false);
 
 
 	// Cordova is ready
