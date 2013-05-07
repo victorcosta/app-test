@@ -39,22 +39,17 @@
     }
 
     function onSuccessAceleration(acceleration) {
-        var element = document.getElementById('accelerometer');
-        var block 	= document.getElementById('block');
-        // element.innerHTML = 'Acceleration X: ' + acceleration.x + '<br />' +
-        //                     'Acceleration Y: ' + acceleration.y + '<br />' +
-        //                     'Acceleration Z: ' + acceleration.z + '<br />' +
-        //                     'Timestamp: '      + acceleration.timestamp + '<br />';
-
         $('#block').css('transform', 'rotate('+(acceleration.x * 2)+'deg )');
         $('#block').css('-webkit-transform', 'rotate('+(acceleration.x * 2)+'deg )');
         $('#block').css('-moz-transform', 'rotate('+(acceleration.x * 2)+'deg )');
-
+        $('#block').html(acceleration.y+'<br/>'+acceleration.z);
 
     }
 
     function onSuccessCompass(heading) {
-        $('#block').html(heading.magneticHeading);
+        $('#triangle').css('transform', 'rotate('+(heading.magneticHeading)+'deg )');
+        $('#triangle').css('-webkit-transform', 'rotate('+(heading.magneticHeading)+'deg )');
+        $('#triangle').css('-moz-transform', 'rotate('+(heading.magneticHeading)+'deg )');
     }
 
     // onError: Failed to get the acceleration
