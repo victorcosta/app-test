@@ -1,5 +1,7 @@
 	document.addEventListener("deviceready", onDeviceReady, false);
-	navigator.splashscreen.show();
+
+	super.setIntegerProperty("splashscreen", R.drawable.splash);
+	super.loadUrl(Config.getStartUrl(), 10000);
 
 
 	var pictureSource;   // picture source
@@ -15,7 +17,10 @@
 		pictureSource=navigator.camera.PictureSourceType;
 		destinationType=navigator.camera.DestinationType;
 		startWatch();
-		navigator.splashscreen.hide();
+		/*navigator.splashscreen.show();
+		setTimeout(function() {
+		    navigator.splashscreen.hide();
+		}, 2000);*/
 	}
 
 	function startWatch() {
